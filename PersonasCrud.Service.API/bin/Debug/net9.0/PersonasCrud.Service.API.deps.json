@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "PersonasCrud.Service.API/1.0.0": {
+        "dependencies": {
+          "PersonasCrud.Domain.API": "1.0.0"
+        },
+        "runtime": {
+          "PersonasCrud.Service.API.dll": {}
+        }
+      },
+      "PersonasCrud.Domain.API/1.0.0": {
+        "runtime": {
+          "PersonasCrud.Domain.API.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PersonasCrud.Service.API/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PersonasCrud.Domain.API/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

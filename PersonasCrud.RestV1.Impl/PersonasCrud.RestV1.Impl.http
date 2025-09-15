@@ -1,0 +1,6 @@
+@PersonasCrud.RestV1.Impl_HostAddress = http://localhost:5136
+
+GET {{PersonasCrud.RestV1.Impl_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
