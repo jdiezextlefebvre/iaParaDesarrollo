@@ -9,3 +9,4 @@
 /Users/ivan/formacionIADesarrollo/PersonasCrud.Domain.API/obj/Debug/net9.0/refint/PersonasCrud.Domain.API.dll
 /Users/ivan/formacionIADesarrollo/PersonasCrud.Domain.API/obj/Debug/net9.0/PersonasCrud.Domain.API.pdb
 /Users/ivan/formacionIADesarrollo/PersonasCrud.Domain.API/obj/Debug/net9.0/ref/PersonasCrud.Domain.API.dll
+/Users/ivan/formacionIADesarrollo/PersonasCrud.Domain.API/obj/Debug/net9.0/PersonasCrud.Domain.API.sourcelink.json

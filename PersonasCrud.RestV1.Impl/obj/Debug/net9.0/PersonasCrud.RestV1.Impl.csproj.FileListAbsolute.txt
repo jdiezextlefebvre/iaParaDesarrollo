@@ -51,3 +51,4 @@
 /Users/ivan/formacionIADesarrollo/PersonasCrud.RestV1.Impl/obj/Debug/net9.0/PersonasCrud.RestV1.Impl.genruntimeconfig.cache
 /Users/ivan/formacionIADesarrollo/PersonasCrud.RestV1.Impl/obj/Debug/net9.0/ref/PersonasCrud.RestV1.Impl.dll
 /Users/ivan/formacionIADesarrollo/PersonasCrud.RestV1.Impl/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.InMemory.dll
+/Users/ivan/formacionIADesarrollo/PersonasCrud.RestV1.Impl/obj/Debug/net9.0/PersonasCrud.RestV1.Impl.sourcelink.json

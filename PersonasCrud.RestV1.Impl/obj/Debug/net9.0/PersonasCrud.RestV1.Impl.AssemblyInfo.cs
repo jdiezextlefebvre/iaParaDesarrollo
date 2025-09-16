@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PersonasCrud.RestV1.Impl")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc258fe6ec8414f46b73a539a34e31ae5b4ce1c6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f27600a641b8ea4bfef33c834208f5c7faa653c1")]
 [assembly: System.Reflection.AssemblyProductAttribute("PersonasCrud.RestV1.Impl")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PersonasCrud.RestV1.Impl")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

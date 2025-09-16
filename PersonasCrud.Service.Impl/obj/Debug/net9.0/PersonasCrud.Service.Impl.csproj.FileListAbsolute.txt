@@ -15,3 +15,4 @@
 /Users/ivan/formacionIADesarrollo/PersonasCrud.Service.Impl/obj/Debug/net9.0/refint/PersonasCrud.Service.Impl.dll
 /Users/ivan/formacionIADesarrollo/PersonasCrud.Service.Impl/obj/Debug/net9.0/PersonasCrud.Service.Impl.pdb
 /Users/ivan/formacionIADesarrollo/PersonasCrud.Service.Impl/obj/Debug/net9.0/ref/PersonasCrud.Service.Impl.dll
+/Users/ivan/formacionIADesarrollo/PersonasCrud.Service.Impl/obj/Debug/net9.0/PersonasCrud.Service.Impl.sourcelink.json

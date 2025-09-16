@@ -13,3 +13,4 @@
 /Users/ivan/formacionIADesarrollo/PersonasCrud.Service.API/obj/Debug/net9.0/refint/PersonasCrud.Service.API.dll
 /Users/ivan/formacionIADesarrollo/PersonasCrud.Service.API/obj/Debug/net9.0/PersonasCrud.Service.API.pdb
 /Users/ivan/formacionIADesarrollo/PersonasCrud.Service.API/obj/Debug/net9.0/ref/PersonasCrud.Service.API.dll
+/Users/ivan/formacionIADesarrollo/PersonasCrud.Service.API/obj/Debug/net9.0/PersonasCrud.Service.API.sourcelink.json

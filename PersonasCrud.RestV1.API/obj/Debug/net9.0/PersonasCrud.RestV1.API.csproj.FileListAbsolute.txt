@@ -15,3 +15,4 @@
 /Users/ivan/formacionIADesarrollo/PersonasCrud.RestV1.API/obj/Debug/net9.0/refint/PersonasCrud.RestV1.API.dll
 /Users/ivan/formacionIADesarrollo/PersonasCrud.RestV1.API/obj/Debug/net9.0/PersonasCrud.RestV1.API.pdb
 /Users/ivan/formacionIADesarrollo/PersonasCrud.RestV1.API/obj/Debug/net9.0/ref/PersonasCrud.RestV1.API.dll
+/Users/ivan/formacionIADesarrollo/PersonasCrud.RestV1.API/obj/Debug/net9.0/PersonasCrud.RestV1.API.sourcelink.json

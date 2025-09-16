@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonasCrud.RestV1.API", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonasCrud.RestV1.Impl", "PersonasCrud.RestV1.Impl\PersonasCrud.RestV1.Impl.csproj", "{8BE1FCEC-404D-4BFA-A5E6-6CA2BCFDAD26}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonasCrud.Domain.Impl.Test", "PersonasCrud.Domain.Impl.Test\PersonasCrud.Domain.Impl.Test.csproj", "{01F79498-874C-40F8-859C-1461F0730B86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,18 @@ Global
 		{8BE1FCEC-404D-4BFA-A5E6-6CA2BCFDAD26}.Release|x64.Build.0 = Release|Any CPU
 		{8BE1FCEC-404D-4BFA-A5E6-6CA2BCFDAD26}.Release|x86.ActiveCfg = Release|Any CPU
 		{8BE1FCEC-404D-4BFA-A5E6-6CA2BCFDAD26}.Release|x86.Build.0 = Release|Any CPU
+		{01F79498-874C-40F8-859C-1461F0730B86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01F79498-874C-40F8-859C-1461F0730B86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01F79498-874C-40F8-859C-1461F0730B86}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{01F79498-874C-40F8-859C-1461F0730B86}.Debug|x64.Build.0 = Debug|Any CPU
+		{01F79498-874C-40F8-859C-1461F0730B86}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{01F79498-874C-40F8-859C-1461F0730B86}.Debug|x86.Build.0 = Debug|Any CPU
+		{01F79498-874C-40F8-859C-1461F0730B86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01F79498-874C-40F8-859C-1461F0730B86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01F79498-874C-40F8-859C-1461F0730B86}.Release|x64.ActiveCfg = Release|Any CPU
+		{01F79498-874C-40F8-859C-1461F0730B86}.Release|x64.Build.0 = Release|Any CPU
+		{01F79498-874C-40F8-859C-1461F0730B86}.Release|x86.ActiveCfg = Release|Any CPU
+		{01F79498-874C-40F8-859C-1461F0730B86}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

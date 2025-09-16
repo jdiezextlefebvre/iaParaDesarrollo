@@ -13,3 +13,4 @@
 /Users/ivan/formacionIADesarrollo/PersonasCrud.Domain.Impl/obj/Debug/net9.0/refint/PersonasCrud.Domain.Impl.dll
 /Users/ivan/formacionIADesarrollo/PersonasCrud.Domain.Impl/obj/Debug/net9.0/PersonasCrud.Domain.Impl.pdb
 /Users/ivan/formacionIADesarrollo/PersonasCrud.Domain.Impl/obj/Debug/net9.0/ref/PersonasCrud.Domain.Impl.dll
+/Users/ivan/formacionIADesarrollo/PersonasCrud.Domain.Impl/obj/Debug/net9.0/PersonasCrud.Domain.Impl.sourcelink.json
