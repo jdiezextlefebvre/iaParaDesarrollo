@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PersonasCrud.Domain.Impl.Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ffe93bf610f28d8bb7ff8b1f05b2c4e782b75382")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eccb20b156dca7e3f72338fd112257b0bf0ae230")]
 [assembly: System.Reflection.AssemblyProductAttribute("PersonasCrud.Domain.Impl.Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PersonasCrud.Domain.Impl.Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

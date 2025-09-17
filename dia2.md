@@ -2504,4 +2504,4 @@ REST Layer → Service.API → Service.Impl → Domain.API → Domain.Impl → D
 
 > Implementa todo esto de la capa del controlador. Prepara primero un plan de acción, para asegurar que no se escapa nada.
 
-> Ya la has liado... ya metiste campos en las DTOs que no tenemos a nivel de capa de servicio. No habrás metido también endpoints que no tengamos en capa de servicio, no?
+> Nos faltaría un proyecto nuevo, para poder ejecutar todo. De momento en ese proyecto solo pondremos este controlador rest... más adelante quizás añadamos nuevos... llama al proyecto Aplciacion. Crealo dentro de esta misma solucion. De momento solo crea el proyecto y configura dependencias. No añadas nada más.
