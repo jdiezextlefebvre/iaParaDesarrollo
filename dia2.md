@@ -2509,3 +2509,13 @@ REST Layer → Service.API → Service.Impl → Domain.API → Domain.Impl → D
 > podemos probar que funciona y arranca?
 > Que es ese endpoint??? Ese es el nuestro???
 > Claro
+
+
+> Vamos a documentar el controlador con swagger y a configurarlo en la app.
+Me cuentas lo que planteas antes de hacerlo?
+
+> Haz la implementación. Prepara primero un plan de trabajo para asegurar que nada se nos pasa
+
+
+---
+

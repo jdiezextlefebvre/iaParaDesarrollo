@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PersonasCrud.RestV1.Impl</name>
+    </assembly>
+    <members>
+        <member name="T:PersonasCrud.RestV1.Impl.Controllers.PersonasController">
+            <summary>
+            Controlador REST puro para gestión de personas.
+            No contiene lógica de negocio, solo mapeo y delegación al servicio.
+            Implementa el contrato IPersonasController sin acoplamiento al servidor.
+            </summary>
+        </member>
+        <member name="M:PersonasCrud.RestV1.Impl.Controllers.PersonasController.#ctor(PersonasCrud.Service.API.Services.IPersonasService)">
+            <summary>
+            Constructor del controlador con inyección de dependencias.
+            </summary>
+            <param name="personasService">Servicio de lógica de negocio para personas.</param>
+            <exception cref="T:System.ArgumentNullException">Se lanza cuando personasService es null.</exception>
+        </member>
+        <member name="M:PersonasCrud.RestV1.Impl.Controllers.PersonasController.AddPersonaAsync(PersonasCrud.RestV1.API.DTOs.DatosNuevaPersonaRestDTO)">
+            <summary>
+            Crea una nueva persona en el sistema.
+            </summary>
+            <param name="datos">Datos de la nueva persona a crear.</param>
+            <returns>La persona creada con su identificador asignado.</returns>
+            <response code="201">Persona creada exitosamente.</response>
+            <response code="400">Datos de entrada inválidos.</response>
+            <response code="409">Conflicto con datos existentes (ej: email duplicado).</response>
+            <response code="500">Error interno del servidor.</response>
+        </member>
+        <member name="M:PersonasCrud.RestV1.Impl.Controllers.PersonasController.GetPersonaAsync(System.String)">
+            <summary>
+            Obtiene una persona por su identificador único.
+            </summary>
+            <param name="id">Identificador único de la persona a buscar.</param>
+            <returns>La persona encontrada o NotFound si no existe.</returns>
+            <response code="200">Persona encontrada exitosamente.</response>
+            <response code="404">Persona no encontrada.</response>
+            <response code="500">Error interno del servidor.</response>
+        </member>
+        <member name="M:PersonasCrud.RestV1.Impl.Controllers.PersonasController.UpdatePersonaAsync(System.String,PersonasCrud.RestV1.API.DTOs.DatosModificarPersonaRestDTO)">
+            <summary>
+            Modifica los datos de una persona existente.
+            </summary>
+            <param name="id">Identificador único de la persona a modificar.</param>
+            <param name="datos">Nuevos datos de la persona.</param>
+            <returns>La persona modificada con los nuevos datos.</returns>
+            <response code="200">Persona modificada exitosamente.</response>
+            <response code="400">Datos de entrada inválidos.</response>
+            <response code="404">Persona no encontrada.</response>
+            <response code="409">Conflicto con datos existentes.</response>
+            <response code="500">Error interno del servidor.</response>
+        </member>
+        <member name="M:PersonasCrud.RestV1.Impl.Controllers.PersonasController.DeletePersonaAsync(System.String)">
+            <summary>
+            Elimina una persona del sistema.
+            </summary>
+            <param name="id">Identificador único de la persona a eliminar.</param>
+            <returns>La persona eliminada o NotFound si no existe.</returns>
+            <response code="200">Persona eliminada exitosamente.</response>
+            <response code="404">Persona no encontrada.</response>
+            <response code="500">Error interno del servidor.</response>
+        </member>
+        <member name="M:PersonasCrud.RestV1.Impl.Controllers.PersonasController.ListPersonasAsync">
+            <summary>
+            Obtiene todas las personas registradas en el sistema.
+            </summary>
+            <returns>Lista de todas las personas registradas.</returns>
+            <response code="200">Lista de personas obtenida exitosamente.</response>
+            <response code="500">Error interno del servidor.</response>
+        </member>
+        <member name="T:PersonasCrud.RestV1.Impl.Mappers.RestMapper">
+            <summary>
+            Mapper estático para conversión entre DTOs de la capa REST y la capa Service.
+            Mantiene la separación de responsabilidades entre capas arquitecturales.
+            </summary>
+        </member>
+        <member name="M:PersonasCrud.RestV1.Impl.Mappers.RestMapper.RestToService(PersonasCrud.RestV1.API.DTOs.DatosNuevaPersonaRestDTO)">
+            <summary>
+            Convierte un DTO de nueva persona de REST a Service.
+            </summary>
+            <param name="restDto">DTO de REST con datos de nueva persona.</param>
+            <returns>DTO de Service equivalente.</returns>
+            <exception cref="T:System.ArgumentNullException">Se lanza cuando restDto es null.</exception>
+        </member>
+        <member name="M:PersonasCrud.RestV1.Impl.Mappers.RestMapper.RestToService(PersonasCrud.RestV1.API.DTOs.DatosModificarPersonaRestDTO)">
+            <summary>
+            Convierte un DTO de modificación de persona de REST a Service.
+            </summary>
+            <param name="restDto">DTO de REST con datos de modificación de persona.</param>
+            <returns>DTO de Service equivalente.</returns>
+            <exception cref="T:System.ArgumentNullException">Se lanza cuando restDto es null.</exception>
+        </member>
+        <member name="M:PersonasCrud.RestV1.Impl.Mappers.RestMapper.ServiceToRest(PersonasCrud.Service.API.DTOs.PersonaServiceDTO)">
+            <summary>
+            Convierte un DTO de persona de Service a REST.
+            </summary>
+            <param name="serviceDto">DTO de Service con datos de persona.</param>
+            <returns>DTO de REST equivalente.</returns>
+            <exception cref="T:System.ArgumentNullException">Se lanza cuando serviceDto es null.</exception>
+        </member>
+        <member name="M:PersonasCrud.RestV1.Impl.Mappers.RestMapper.ServiceToRest(System.Collections.Generic.IEnumerable{PersonasCrud.Service.API.DTOs.PersonaServiceDTO})">
+            <summary>
+            Convierte una colección de DTOs de persona de Service a REST.
+            </summary>
+            <param name="serviceDtos">Colección de DTOs de Service.</param>
+            <returns>Colección de DTOs de REST equivalentes.</returns>
+            <exception cref="T:System.ArgumentNullException">Se lanza cuando serviceDtos es null.</exception>
+        </member>
+        <member name="T:PersonasCrud.RestV1.Impl.Middleware.ExceptionHandlingMiddleware">
+            <summary>
+            Middleware para manejo centralizado de excepciones en la capa REST.
+            Captura excepciones y las convierte en respuestas HTTP estructuradas.
+            </summary>
+        </member>
+        <member name="M:PersonasCrud.RestV1.Impl.Middleware.ExceptionHandlingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{PersonasCrud.RestV1.Impl.Middleware.ExceptionHandlingMiddleware})">
+            <summary>
+            Constructor del middleware de manejo de excepciones.
+            </summary>
+            <param name="next">Siguiente middleware en el pipeline.</param>
+            <param name="logger">Logger para registrar eventos de excepción.</param>
+            <exception cref="T:System.ArgumentNullException">Se lanza cuando algún parámetro es null.</exception>
+        </member>
+        <member name="M:PersonasCrud.RestV1.Impl.Middleware.ExceptionHandlingMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Ejecuta el middleware capturando y manejando excepciones.
+            </summary>
+            <param name="context">Contexto HTTP de la petición actual.</param>
+        </member>
+        <member name="M:PersonasCrud.RestV1.Impl.Middleware.ExceptionHandlingMiddleware.HandleValidationExceptionAsync(Microsoft.AspNetCore.Http.HttpContext,System.ComponentModel.DataAnnotations.ValidationException)">
+            <summary>
+            Maneja excepciones de validación (ValidationException).
+            Las convierte en respuestas HTTP 400 Bad Request.
+            </summary>
+            <param name="context">Contexto HTTP de la petición.</param>
+            <param name="ex">Excepción de validación capturada.</param>
+        </member>
+        <member name="M:PersonasCrud.RestV1.Impl.Middleware.ExceptionHandlingMiddleware.HandleBusinessExceptionAsync(Microsoft.AspNetCore.Http.HttpContext,System.InvalidOperationException)">
+            <summary>
+            Maneja excepciones de lógica de negocio (InvalidOperationException).
+            Las convierte en respuestas HTTP 409 Conflict.
+            </summary>
+            <param name="context">Contexto HTTP de la petición.</param>
+            <param name="ex">Excepción de negocio capturada.</param>
+        </member>
+        <member name="M:PersonasCrud.RestV1.Impl.Middleware.ExceptionHandlingMiddleware.HandleGenericExceptionAsync(Microsoft.AspNetCore.Http.HttpContext,System.Exception)">
+            <summary>
+            Maneja excepciones genéricas no controladas.
+            Las convierte en respuestas HTTP 500 Internal Server Error.
+            </summary>
+            <param name="context">Contexto HTTP de la petición.</param>
+            <param name="ex">Excepción genérica capturada.</param>
+        </member>
+        <member name="M:PersonasCrud.RestV1.Impl.Middleware.ExceptionHandlingMiddleware.WriteJsonResponseAsync(Microsoft.AspNetCore.Http.HttpContext,PersonasCrud.RestV1.API.DTOs.ErrorResponseDTO)">
+            <summary>
+            Escribe una respuesta JSON estructurada al cliente.
+            </summary>
+            <param name="context">Contexto HTTP de la petición.</param>
+            <param name="response">DTO de respuesta de error a serializar.</param>
+        </member>
+    </members>
+</doc>

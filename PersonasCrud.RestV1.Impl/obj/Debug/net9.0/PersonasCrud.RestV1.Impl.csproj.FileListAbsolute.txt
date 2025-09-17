@@ -22,3 +22,6 @@
 /Users/ivan/formacionIADesarrollo/PersonasCrud.RestV1.Impl/obj/Debug/net9.0/PersonasCrud.RestV1.Impl.pdb
 /Users/ivan/formacionIADesarrollo/PersonasCrud.RestV1.Impl/obj/Debug/net9.0/ref/PersonasCrud.RestV1.Impl.dll
 /Users/ivan/formacionIADesarrollo/PersonasCrud.RestV1.Impl/obj/Debug/net9.0/PersonasCrud.RestV1.Impl.sourcelink.json
+/Users/ivan/formacionIADesarrollo/PersonasCrud.RestV1.Impl/bin/Debug/net9.0/PersonasCrud.RestV1.Impl.xml
+/Users/ivan/formacionIADesarrollo/PersonasCrud.RestV1.Impl/bin/Debug/net9.0/PersonasCrud.RestV1.API.xml
+/Users/ivan/formacionIADesarrollo/PersonasCrud.RestV1.Impl/obj/Debug/net9.0/PersonasCrud.RestV1.Impl.xml

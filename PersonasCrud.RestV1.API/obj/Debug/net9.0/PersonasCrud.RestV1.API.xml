@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PersonasCrud.RestV1.API</name>
+    </assembly>
+    <members>
+        <member name="T:PersonasCrud.RestV1.API.Controllers.IPersonasController">
+            <summary>
+            Contrato para el controlador REST de personas.
+            Define operaciones CRUD puras sin lógica de servidor ni configuración.
+            </summary>
+        </member>
+        <member name="M:PersonasCrud.RestV1.API.Controllers.IPersonasController.AddPersonaAsync(PersonasCrud.RestV1.API.DTOs.DatosNuevaPersonaRestDTO)">
+            <summary>
+            Crea una nueva persona en el sistema.
+            </summary>
+            <param name="datos">Datos de la nueva persona a crear.</param>
+            <returns>La persona creada con su identificador asignado.</returns>
+        </member>
+        <member name="M:PersonasCrud.RestV1.API.Controllers.IPersonasController.GetPersonaAsync(System.String)">
+            <summary>
+            Obtiene una persona por su identificador único.
+            </summary>
+            <param name="id">Identificador único de la persona a buscar.</param>
+            <returns>La persona encontrada o null si no existe.</returns>
+        </member>
+        <member name="M:PersonasCrud.RestV1.API.Controllers.IPersonasController.UpdatePersonaAsync(System.String,PersonasCrud.RestV1.API.DTOs.DatosModificarPersonaRestDTO)">
+            <summary>
+            Modifica los datos de una persona existente.
+            </summary>
+            <param name="id">Identificador único de la persona a modificar.</param>
+            <param name="datos">Nuevos datos de la persona.</param>
+            <returns>La persona modificada con los nuevos datos.</returns>
+        </member>
+        <member name="M:PersonasCrud.RestV1.API.Controllers.IPersonasController.DeletePersonaAsync(System.String)">
+            <summary>
+            Elimina una persona del sistema.
+            </summary>
+            <param name="id">Identificador único de la persona a eliminar.</param>
+            <returns>La persona eliminada o null si no existe.</returns>
+        </member>
+        <member name="M:PersonasCrud.RestV1.API.Controllers.IPersonasController.ListPersonasAsync">
+            <summary>
+            Obtiene todas las personas registradas en el sistema.
+            </summary>
+            <returns>Lista de todas las personas registradas.</returns>
+        </member>
+        <member name="T:PersonasCrud.RestV1.API.DTOs.DatosModificarPersonaRestDTO">
+            <summary>
+            DTO para modificar una persona existente desde la capa REST.
+            Incluye validaciones con DataAnnotations para entrada HTTP.
+            </summary>
+            <param name="Nombre">Nuevo nombre de la persona. Debe tener entre 2 y 100 caracteres.</param>
+            <param name="Dni">Nuevo Documento Nacional de Identidad de la persona.</param>
+            <param name="Email">Nueva dirección de correo electrónico válida.</param>
+            <param name="Edad">Nueva edad en años. Debe estar entre 18 y 120.</param>
+        </member>
+        <member name="M:PersonasCrud.RestV1.API.DTOs.DatosModificarPersonaRestDTO.#ctor(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            DTO para modificar una persona existente desde la capa REST.
+            Incluye validaciones con DataAnnotations para entrada HTTP.
+            </summary>
+            <param name="Nombre">Nuevo nombre de la persona. Debe tener entre 2 y 100 caracteres.</param>
+            <param name="Dni">Nuevo Documento Nacional de Identidad de la persona.</param>
+            <param name="Email">Nueva dirección de correo electrónico válida.</param>
+            <param name="Edad">Nueva edad en años. Debe estar entre 18 y 120.</param>
+        </member>
+        <member name="P:PersonasCrud.RestV1.API.DTOs.DatosModificarPersonaRestDTO.Nombre">
+            <summary>Nuevo nombre de la persona. Debe tener entre 2 y 100 caracteres.</summary>
+        </member>
+        <member name="P:PersonasCrud.RestV1.API.DTOs.DatosModificarPersonaRestDTO.Dni">
+            <summary>Nuevo Documento Nacional de Identidad de la persona.</summary>
+        </member>
+        <member name="P:PersonasCrud.RestV1.API.DTOs.DatosModificarPersonaRestDTO.Email">
+            <summary>Nueva dirección de correo electrónico válida.</summary>
+        </member>
+        <member name="P:PersonasCrud.RestV1.API.DTOs.DatosModificarPersonaRestDTO.Edad">
+            <summary>Nueva edad en años. Debe estar entre 18 y 120.</summary>
+        </member>
+        <member name="T:PersonasCrud.RestV1.API.DTOs.DatosNuevaPersonaRestDTO">
+            <summary>
+            DTO para crear una nueva persona desde la capa REST.
+            Incluye validaciones con DataAnnotations para entrada HTTP.
+            </summary>
+            <param name="Nombre">Nombre completo de la persona. Debe tener entre 2 y 100 caracteres.</param>
+            <param name="Dni">Documento Nacional de Identidad de la persona.</param>
+            <param name="Email">Dirección de correo electrónico válida.</param>
+            <param name="Edad">Edad en años. Debe estar entre 18 y 120.</param>
+            <example>
+            {
+              "nombre": "María López Fernández",
+              "dni": "87654321B",
+              "email": "maria.lopez@example.com",
+              "edad": 28
+            }
+            </example>
+        </member>
+        <member name="M:PersonasCrud.RestV1.API.DTOs.DatosNuevaPersonaRestDTO.#ctor(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            DTO para crear una nueva persona desde la capa REST.
+            Incluye validaciones con DataAnnotations para entrada HTTP.
+            </summary>
+            <param name="Nombre">Nombre completo de la persona. Debe tener entre 2 y 100 caracteres.</param>
+            <param name="Dni">Documento Nacional de Identidad de la persona.</param>
+            <param name="Email">Dirección de correo electrónico válida.</param>
+            <param name="Edad">Edad en años. Debe estar entre 18 y 120.</param>
+            <example>
+            {
+              "nombre": "María López Fernández",
+              "dni": "87654321B",
+              "email": "maria.lopez@example.com",
+              "edad": 28
+            }
+            </example>
+        </member>
+        <member name="P:PersonasCrud.RestV1.API.DTOs.DatosNuevaPersonaRestDTO.Nombre">
+            <summary>Nombre completo de la persona. Debe tener entre 2 y 100 caracteres.</summary>
+        </member>
+        <member name="P:PersonasCrud.RestV1.API.DTOs.DatosNuevaPersonaRestDTO.Dni">
+            <summary>Documento Nacional de Identidad de la persona.</summary>
+        </member>
+        <member name="P:PersonasCrud.RestV1.API.DTOs.DatosNuevaPersonaRestDTO.Email">
+            <summary>Dirección de correo electrónico válida.</summary>
+        </member>
+        <member name="P:PersonasCrud.RestV1.API.DTOs.DatosNuevaPersonaRestDTO.Edad">
+            <summary>Edad en años. Debe estar entre 18 y 120.</summary>
+        </member>
+        <member name="T:PersonasCrud.RestV1.API.DTOs.ErrorResponseDTO">
+            <summary>
+            DTO estándar para respuestas de error en la API REST.
+            Proporciona información estructurada sobre errores HTTP.
+            </summary>
+            <param name="Error">Tipo o código del error.</param>
+            <param name="Message">Mensaje descriptivo del error para el usuario.</param>
+            <param name="Details">Detalles técnicos adicionales del error (opcional).</param>
+            <param name="Timestamp">Fecha y hora UTC cuando ocurrió el error.</param>
+            <param name="TraceId">Identificador de trazabilidad para correlacionar logs (opcional).</param>
+        </member>
+        <member name="M:PersonasCrud.RestV1.API.DTOs.ErrorResponseDTO.#ctor(System.String,System.String,System.String,System.DateTime,System.String)">
+            <summary>
+            DTO estándar para respuestas de error en la API REST.
+            Proporciona información estructurada sobre errores HTTP.
+            </summary>
+            <param name="Error">Tipo o código del error.</param>
+            <param name="Message">Mensaje descriptivo del error para el usuario.</param>
+            <param name="Details">Detalles técnicos adicionales del error (opcional).</param>
+            <param name="Timestamp">Fecha y hora UTC cuando ocurrió el error.</param>
+            <param name="TraceId">Identificador de trazabilidad para correlacionar logs (opcional).</param>
+        </member>
+        <member name="P:PersonasCrud.RestV1.API.DTOs.ErrorResponseDTO.Error">
+            <summary>Tipo o código del error.</summary>
+        </member>
+        <member name="P:PersonasCrud.RestV1.API.DTOs.ErrorResponseDTO.Message">
+            <summary>Mensaje descriptivo del error para el usuario.</summary>
+        </member>
+        <member name="P:PersonasCrud.RestV1.API.DTOs.ErrorResponseDTO.Details">
+            <summary>Detalles técnicos adicionales del error (opcional).</summary>
+        </member>
+        <member name="P:PersonasCrud.RestV1.API.DTOs.ErrorResponseDTO.TraceId">
+            <summary>Identificador de trazabilidad para correlacionar logs (opcional).</summary>
+        </member>
+        <member name="P:PersonasCrud.RestV1.API.DTOs.ErrorResponseDTO.Timestamp">
+            <summary>
+            Timestamp inicializado con la fecha y hora actual en UTC si no se proporciona.
+            </summary>
+        </member>
+        <member name="T:PersonasCrud.RestV1.API.DTOs.PersonaRestDTO">
+            <summary>
+            DTO para representar una persona en la capa REST.
+            Optimizado para respuestas HTTP con serialización JSON.
+            </summary>
+            <param name="Id">Identificador único de la persona (UUID).</param>
+            <param name="Nombre">Nombre completo de la persona.</param>
+            <param name="Dni">Documento Nacional de Identidad de la persona.</param>
+            <param name="Email">Dirección de correo electrónico.</param>
+            <param name="Edad">Edad en años.</param>
+            <example>
+            {
+              "id": "123e4567-e89b-12d3-a456-426614174000",
+              "nombre": "Juan Pérez García",
+              "dni": "12345678A",
+              "email": "juan.perez@example.com",
+              "edad": 35
+            }
+            </example>
+        </member>
+        <member name="M:PersonasCrud.RestV1.API.DTOs.PersonaRestDTO.#ctor(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            DTO para representar una persona en la capa REST.
+            Optimizado para respuestas HTTP con serialización JSON.
+            </summary>
+            <param name="Id">Identificador único de la persona (UUID).</param>
+            <param name="Nombre">Nombre completo de la persona.</param>
+            <param name="Dni">Documento Nacional de Identidad de la persona.</param>
+            <param name="Email">Dirección de correo electrónico.</param>
+            <param name="Edad">Edad en años.</param>
+            <example>
+            {
+              "id": "123e4567-e89b-12d3-a456-426614174000",
+              "nombre": "Juan Pérez García",
+              "dni": "12345678A",
+              "email": "juan.perez@example.com",
+              "edad": 35
+            }
+            </example>
+        </member>
+        <member name="P:PersonasCrud.RestV1.API.DTOs.PersonaRestDTO.Id">
+            <summary>Identificador único de la persona (UUID).</summary>
+        </member>
+        <member name="P:PersonasCrud.RestV1.API.DTOs.PersonaRestDTO.Nombre">
+            <summary>Nombre completo de la persona.</summary>
+        </member>
+        <member name="P:PersonasCrud.RestV1.API.DTOs.PersonaRestDTO.Dni">
+            <summary>Documento Nacional de Identidad de la persona.</summary>
+        </member>
+        <member name="P:PersonasCrud.RestV1.API.DTOs.PersonaRestDTO.Email">
+            <summary>Dirección de correo electrónico.</summary>
+        </member>
+        <member name="P:PersonasCrud.RestV1.API.DTOs.PersonaRestDTO.Edad">
+            <summary>Edad en años.</summary>
+        </member>
+    </members>
+</doc>

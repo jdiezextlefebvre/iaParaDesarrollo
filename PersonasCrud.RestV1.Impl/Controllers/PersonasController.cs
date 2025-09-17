@@ -16,6 +16,7 @@ namespace PersonasCrud.RestV1.Impl.Controllers;
 [Route("api/v1/[controller]")]
 [Produces("application/json")]
 [ProducesResponseType<ErrorResponseDTO>(StatusCodes.Status500InternalServerError)]
+[Tags("Gestión de Personas")]
 public class PersonasController : ControllerBase
 {
     private readonly IPersonasService _personasService;

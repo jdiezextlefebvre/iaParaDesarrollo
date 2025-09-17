@@ -57,3 +57,8 @@
 /Users/ivan/formacionIADesarrollo/PersonasCrud.Aplicacion/obj/Debug/net9.0/PersonasCrud.Aplicacion.pdb
 /Users/ivan/formacionIADesarrollo/PersonasCrud.Aplicacion/obj/Debug/net9.0/PersonasCrud.Aplicacion.genruntimeconfig.cache
 /Users/ivan/formacionIADesarrollo/PersonasCrud.Aplicacion/obj/Debug/net9.0/ref/PersonasCrud.Aplicacion.dll
+/Users/ivan/formacionIADesarrollo/PersonasCrud.Aplicacion/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/ivan/formacionIADesarrollo/PersonasCrud.Aplicacion/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/ivan/formacionIADesarrollo/PersonasCrud.Aplicacion/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/ivan/formacionIADesarrollo/PersonasCrud.Aplicacion/bin/Debug/net9.0/PersonasCrud.RestV1.Impl.xml
+/Users/ivan/formacionIADesarrollo/PersonasCrud.Aplicacion/bin/Debug/net9.0/PersonasCrud.RestV1.API.xml
