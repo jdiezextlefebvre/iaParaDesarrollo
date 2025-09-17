@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:dev": "concurrently 'npm:json-server' 'npm:serve:angular'",
-    "serve:angular": "ng serve",
+    "serve:angular": "ng serve --configuration=development",
     "json-server": "json-server --watch ./dev/personas.json --port 3000"
   },
   "private": true,
@@ -22,6 +22,7 @@
     "@angular/platform-server": "^19.0.0",
     "@angular/router": "^19.0.0",
     "@angular/ssr": "^19.0.3",
+    "font-awesome": "^4.7.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

@@ -1,0 +1,18 @@
+<div class="list-container">
+    @if (isLoading) {
+        <p>Cargando personas...</p>
+    } @else if (error) {
+        <div class="error-message">{{ error }}</div>
+    } @else if (personas.length > 0) {
+        @for (persona of personas; track persona.id) {
+            <app-persona-list-item
+                [persona]="persona"
+                (onView)="onVerPersona($event)"
+                (onEdit)="onEditarPersona($event)"
+                (onDelete)="onBorrarPersona($event)">
+            </app-persona-list-item>
+        }
+    } @else {
+        <p>No se encontraron personas.</p>
+    }
+</div>

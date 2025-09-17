@@ -1,0 +1,50 @@
+.item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.item-container:hover {
+    background-color: #f9f9f9;
+}
+
+.persona-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.nombre {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.email {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.acciones {
+    display: flex;
+    gap: 1rem;
+}
+
+.acciones i {
+    font-size: 1.2rem;
+    color: #337ab7;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.acciones i:hover {
+    color: #23527c;
+}
+
+.acciones .fa-trash:hover {
+    color: #d9534f;
+}

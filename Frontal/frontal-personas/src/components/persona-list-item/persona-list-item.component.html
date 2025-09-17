@@ -1,0 +1,10 @@
+<div class="item-container" (click)="solicitarVista()">
+    <div class="persona-info">
+        <span class="nombre">{{ persona.nombre }}</span>
+        <span class="email">{{ persona.email }}</span>
+    </div>
+    <div class="acciones">
+        <i class="fa fa-pencil" aria-hidden="true" (click)="$event.stopPropagation(); solicitarEdicion()"></i>
+        <i class="fa fa-trash" aria-hidden="true" (click)="$event.stopPropagation(); solicitarBorrado()"></i>
+    </div>
+</div>
