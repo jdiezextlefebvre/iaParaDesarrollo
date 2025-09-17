@@ -1,0 +1,32 @@
+{
+  "personas": [
+    {
+      "id": "1",
+      "nombre": "Juan Pérez",
+      "dni": "12345678A",
+      "email": "juan.perez@example.com",
+      "edad": 30
+    },
+    {
+      "id": "2",
+      "nombre": "Ana López",
+      "dni": "87654321B",
+      "email": "ana.lopez@example.com",
+      "edad": 25
+    },
+    {
+      "id": "3",
+      "nombre": "Carlos García",
+      "dni": "11223344C",
+      "email": "carlos.garcia@example.com",
+      "edad": 45
+    },
+    {
+      "id": "4",
+      "nombre": "Laura Martínez",
+      "dni": "44332211D",
+      "email": "laura.martinez@example.com",
+      "edad": 38
+    }
+  ]
+}
