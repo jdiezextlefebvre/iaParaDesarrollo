@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PersonasCrud.Service.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d78ec35dfada51d2e31ba8ebb0c23508e6db23a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ffe93bf610f28d8bb7ff8b1f05b2c4e782b75382")]
 [assembly: System.Reflection.AssemblyProductAttribute("PersonasCrud.Service.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PersonasCrud.Service.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

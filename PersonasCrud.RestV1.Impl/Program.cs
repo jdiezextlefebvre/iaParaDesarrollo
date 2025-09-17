@@ -1,41 +1,14 @@
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}
-
-app.UseHttpsRedirection();
-
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
-
-app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
+// NOTA: Este archivo NO debe configurar el servidor web.
+// La configuración del servidor (builder.Services, app.Run(), etc.) 
+// debe hacerse en un proyecto Host separado.
+//
+// Este proyecto (PersonasCrud.RestV1.Impl) contiene únicamente:
+// - Controladores REST puros
+// - Middleware de manejo de excepciones  
+// - Mappers entre DTOs
+//
+// Para usar estos componentes en un servidor web, el proyecto Host debe:
+// 1. Referenciar este proyecto
+// 2. Registrar las dependencias necesarias
+// 3. Configurar el pipeline con el middleware
+// 4. Ejecutar el servidor

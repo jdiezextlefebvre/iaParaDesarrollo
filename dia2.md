@@ -2488,3 +2488,20 @@ REST Layer → Service.API → Service.Impl → Domain.API → Domain.Impl → D
 **¡La capa de servicio está lista y compilando correctamente!** 🚀
 
 ---
+
+> Nos toca ahora la capa de controlador rest.
+  Ten en cuenta que esta capa no configura el servidor web. Eso se hará en otro proyecto después, donde exista la posibilidad de integrar no solo este microservicio, sino otros más. Le ves sentido?
+  Para el tratamiento de excepcionesque provengan de capa de servicio, o que aparezcan aqui, usareemos un Middleware de Manejo de Excepciones.
+
+  Me muestras lo que planteas hacer antes de hacerlo?
+  
+
+  > Eso lo tenemos definido por algun sitio?
+
+> Quiero que me muestraes de nuevo todo lo que planteas hacer.... con detalle , pero en el chat
+
+> Recuerda que esa configuracion de servidor irá en otro proyecto. No la crees aun. De acuerdo?
+
+> Implementa todo esto de la capa del controlador. Prepara primero un plan de acción, para asegurar que no se escapa nada.
+
+> Ya la has liado... ya metiste campos en las DTOs que no tenemos a nivel de capa de servicio. No habrás metido también endpoints que no tengamos en capa de servicio, no?
