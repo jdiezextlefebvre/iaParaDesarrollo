@@ -3734,3 +3734,94 @@ El archivo generado incluye:
 3. **XML source:** `PersonasCrud.Aplicacion/bin/Debug/net9.0/*.xml`
 
 **El archivo swagger.json es el estándar OpenAPI 3.0.4 que cualquier herramienta puede importar** para generar documentación, clientes, o pruebas automatizadas.
+
+IvanciniGT: No cree .gitignore... y se me ha metido en el repo local mucha basura. Lo arreglas? Me cuentas primero lo que vas a hacer?
+
+GitHub Copilot: Perfecto, tienes razón. Sin un `.gitignore` se han añadido archivos que no deberían estar en el repositorio. Te explico lo que voy a hacer:
+
+## 🧹 **Plan para limpiar el repositorio:**
+
+### 1️⃣ **Análisis de la situación actual**
+Primero voy a ver qué archivos se han añadido incorrectamente al repositorio.
+
+### 2️⃣ **Crear .gitignore apropiado para .NET**
+Voy a crear un `.gitignore` completo para proyectos .NET que incluya:
+- Carpetas `bin/` y `obj/`
+- Archivos de Visual Studio/VS Code
+- Archivos de usuario y temporales
+- Logs y archivos de runtime
+- Paquetes NuGet locales
+
+### 3️⃣ **Limpiar archivos ya trackeados**
+Voy a remover del índice de Git (pero mantener en disco) los archivos que no deberían estar:
+- `bin/Debug/` de todos los proyectos
+- `obj/` de todos los proyectos
+- `*.log` files
+- Archivos temporales de IDE
+
+### 4️⃣ **Confirmar los cambios**
+Hacer commit del `.gitignore` y la limpieza.
+
+## 🔍 **¿Procedo con este plan?**
+
+Los pasos específicos serían:
+1. `git status` para ver qué hay
+2. Crear `.gitignore` estándar de .NET
+3. `git rm --cached` para remover archivos del tracking sin borrarlos del disco
+4. `git add .gitignore` y `git commit`
+
+¿Te parece bien este enfoque?
+
+IvanciniGT: PERFECTO !
+
+GitHub Copilot: ¡Perfecto! Vamos a limpiar el repositorio. Empiezo ejecutando el plan:
+
+### 1️⃣ **Análisis de la situación actual** ¡Exacto! Hay muchos archivos de build que no deberían estar. Veamos cuántos hay en total: ¡360 archivos! Definitivamente necesitamos limpiar esto.
+
+### 2️⃣ **Crear .gitignore apropiado para .NET** 
+
+Made changes.
+
+### 3️⃣ **Limpiar archivos ya trackeados**
+
+Ahora voy a remover del tracking todos los archivos que no deberían estar: Ahora removemos los archivos de logs y otros archivos temporales: ### 4️⃣ **Confirmar los cambios**
+
+Ahora vamos a añadir el .gitignore y hacer commit: Perfecto! Ahora podemos ver que hay un montón de archivos marcados para eliminación (D) y el .gitignore está añadido (A). Hagamos el commit: ¡Excelente! Vamos a verificar el estado final del repositorio: Perfecto! Vamos a ver cuántos archivos tenemos ahora en el repositorio: Y vamos a ver qué tipos de archivos han quedado: ¡Perfecto! Ahora tenemos solo 55 archivos (vs 360+ anteriormente) y todos son archivos de código fuente relevantes.
+
+## ✅ **Limpieza del Repositorio Completada Exitosamente**
+
+### 📊 **Resultado de la limpieza:**
+
+- **Antes**: 360+ archivos incluyendo build artifacts
+- **Después**: 55 archivos solo de código fuente
+- **Archivos removidos**: 362 archivos (bin/, obj/, logs, etc.)
+- **Archivos añadidos**: 1 archivo (.gitignore)
+
+### 🧹 **Archivos eliminados del tracking:**
+
+1. **Carpetas bin/** de todos los proyectos (dlls, ejecutables)
+2. **Carpetas obj/** de todos los proyectos (archivos temporales de build)
+3. **Archivos de log** (app.log, swagger.json)
+4. **Archivos de cache** y metadatos de build
+5. **Recursos de localización** de herramientas de testing
+6. **Archivos de debugging** (.pdb)
+
+### 📄 **.gitignore creado incluye:**
+
+- **Build outputs**: bin/, obj/, logs/
+- **IDE files**: .vs/, .vscode/, *.user
+- **Package files**: packages/, *.cache
+- **OS files**: .DS_Store, Thumbs.db
+- **Temporary files**: *.tmp, *.log
+- **.NET específicos**: *.dll, *.pdb, project.lock.json
+
+### 🎯 **Estado final:**
+
+- **Repositorio limpio** con solo archivos fuente
+- **Futuras builds** no ensuciarán el repo
+- **Colaboración mejorada** sin conflictos de build
+- **Tamaño reducido** del repositorio
+
+**¡El repositorio está ahora completamente limpio y preparado para desarrollo profesional!** 🚀
+
+En el futuro, cuando hagas `dotnet build` o `dotnet run`, los archivos generados no aparecerán en `git status` porque están protegidos por el .gitignore.

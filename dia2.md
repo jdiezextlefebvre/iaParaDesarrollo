@@ -2519,3 +2519,4 @@ Me cuentas lo que planteas antes de hacerlo?
 
 ---
 
+>No cree .gitignore... y se me ha metido en el repo local mucha basura. Lo arreglas? Me cuentas primero lo que vas a hacer?
