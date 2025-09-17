@@ -54,11 +54,8 @@ public class PersonasController : ControllerBase
         // Mapear Service → REST
         var resultado = RestMapper.ServiceToRest(personaCreada);
         
-        // Retornar 201 Created con ubicación del recurso
-        return CreatedAtAction(
-            nameof(GetPersonaAsync), 
-            new { id = resultado.Id }, 
-            resultado);
+        // Retornar 201 Created
+        return Created($"/api/v1/personas/{resultado.Id}", resultado);
     }
 
     /// <summary>

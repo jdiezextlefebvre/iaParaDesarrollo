@@ -1,41 +1,42 @@
+using Microsoft.EntityFrameworkCore;
+using PersonasCrud.Domain.API.Repositories;
+using PersonasCrud.Domain.Impl.Context;
+using PersonasCrud.Domain.Impl.Repositories;
+using PersonasCrud.RestV1.Impl.Middleware;
+using PersonasCrud.Service.API.Services;
+using PersonasCrud.Service.Impl.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+// Configurar servicios
+builder.Services.AddControllers();
+
+// Configurar Entity Framework con base de datos en memoria
+builder.Services.AddDbContext<PersonasDbContext>(options =>
+    options.UseInMemoryDatabase("PersonasDb"));
+
+// Configurar inyección de dependencias
+builder.Services.AddScoped<IPersonasRepository, PersonasRepositoryEF>();
+builder.Services.AddScoped<IPersonasService, PersonasService>();
+
+// Configurar OpenAPI para desarrollo
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configurar pipeline HTTP
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
 
+// Agregar middleware de manejo de excepciones
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+
 app.UseHttpsRedirection();
+app.UseRouting();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+// Mapear controladores
+app.MapControllers();
 
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
-
-app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
+await app.RunAsync();
