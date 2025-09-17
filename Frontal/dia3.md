@@ -39,6 +39,8 @@ ng trabaja sobre ellas.
 CRUD de personas:
 - Componente Listado de personas
   - Componente Item del listado de personas
+
+
 - Componente Formulario Edición Persona
 - Componente Formulario Nueva Persona
 - Componente Detalle Persona
@@ -66,3 +68,17 @@ Test-Doubles:
 - Spy
 - Fake
 - Stub
+
+---
+
+- Instalar angular
+- Overview del proyecto Angular que queremos montar. Sin pedir nada. GENERAR CONTEXTO.
+- Crear un proyecto base Angular, con los módulos que sean necesarios
+- Modelos de comunicación con el back (SWAGGER)
+- Modelos de comunicación para componentes
+- Mapeadores entre modelos
+- Servicios para la gestión de personas (llamadas al API REST)
+- Ese servicio lo podemos probar con el json-server
+- ...
+
+node <-- Instalar
