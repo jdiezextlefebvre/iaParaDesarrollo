@@ -13,19 +13,19 @@ export class PersonaListItemComponent {
 
   @Input({ required: true }) persona!: Persona;
 
-  @Output() onView = new EventEmitter<string>();
-  @Output() onEdit = new EventEmitter<string>();
-  @Output() onDelete = new EventEmitter<string>();
+  @Output() view = new EventEmitter<string>();
+  @Output() edit = new EventEmitter<string>();
+  @Output() delete = new EventEmitter<string>();
 
   solicitarVista() {
-    this.onView.emit(this.persona.id);
+    this.view.emit(this.persona.id);
   }
 
   solicitarEdicion() {
-    this.onEdit.emit(this.persona.id);
+    this.edit.emit(this.persona.id);
   }
 
   solicitarBorrado() {
-    this.onDelete.emit(this.persona.id);
+    this.delete.emit(this.persona.id);
   }
 }

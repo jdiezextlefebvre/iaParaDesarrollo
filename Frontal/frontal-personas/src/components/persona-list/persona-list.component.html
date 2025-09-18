@@ -7,9 +7,9 @@
         @for (persona of personas; track persona.id) {
             <app-persona-list-item
                 [persona]="persona"
-                (onView)="onVerPersona($event)"
-                (onEdit)="onEditarPersona($event)"
-                (onDelete)="onBorrarPersona($event)">
+                (view)="onVerPersona($event)"
+                (edit)="onEditarPersona($event)"
+                (delete)="onBorrarPersona($event)">
             </app-persona-list-item>
         }
     } @else {

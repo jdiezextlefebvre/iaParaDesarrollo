@@ -4,7 +4,7 @@
         <span class="email">{{ persona.email }}</span>
     </div>
     <div class="acciones">
-        <i class="fa fa-pencil" aria-hidden="true" (click)="$event.stopPropagation(); solicitarEdicion()"></i>
-        <i class="fa fa-trash" aria-hidden="true" (click)="$event.stopPropagation(); solicitarBorrado()"></i>
+        <i class="fas fa-edit" (click)="$event.stopPropagation(); solicitarEdicion()"></i>
+        <i class="fas fa-trash" (click)="$event.stopPropagation(); solicitarBorrado()"></i>
     </div>
 </div>

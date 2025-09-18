@@ -1,13 +1,6 @@
 {
   "personas": [
     {
-      "id": "1",
-      "nombre": "Juan Pérez",
-      "dni": "12345678A",
-      "email": "juan.perez@example.com",
-      "edad": 30
-    },
-    {
       "id": "2",
       "nombre": "Ana López",
       "dni": "87654321B",
