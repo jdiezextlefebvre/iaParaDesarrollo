@@ -1,9 +1,9 @@
-import { ModificarPersona } from '../models/frontal/modificar-persona.model';
-import { NuevaPersona } from '../models/frontal/nueva-persona.model';
-import { Persona } from '../models/frontal/persona.model';
-import { DatosModificarPersonaRestDTO } from '../models/rest/datos-modificar-persona.rest.dto';
-import { DatosNuevaPersonaRestDTO } from '../models/rest/datos-nueva-persona.rest.dto';
-import { PersonaRestDTO } from '../models/rest/persona.rest.dto';
+import { ModificarPersona } from '../environments/models/frontal/modificar-persona.model';
+import { NuevaPersona } from '../environments/models/frontal/nueva-persona.model';
+import { Persona } from '../environments/models/frontal/persona.model';
+import { DatosModificarPersonaRestDTO } from '../environments/models/rest/datos-modificar-persona.rest.dto';
+import { DatosNuevaPersonaRestDTO } from '../environments/models/rest/datos-nueva-persona.rest.dto';
+import { PersonaRestDTO } from '../environments/models/rest/persona.rest.dto';
 
 /**
  * Convierte un DTO de persona del API a un modelo de persona interno.

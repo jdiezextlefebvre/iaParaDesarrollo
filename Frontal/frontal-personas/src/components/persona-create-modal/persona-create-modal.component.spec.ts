@@ -4,8 +4,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { of, throwError } from 'rxjs';
 import { PersonaCreateModalComponent } from './persona-create-modal.component';
 import { PersonasService } from '../../services/personas.service';
-import { NuevaPersona } from '../../models/frontal/nueva-persona.model';
-import { Persona } from '../../models/frontal/persona.model';
+import { NuevaPersona } from '../../environments/models/frontal/nueva-persona.model';
+import { Persona } from '../../environments/models/frontal/persona.model';
 
 describe('PersonaCreateModalComponent', () => {
   let component: PersonaCreateModalComponent;

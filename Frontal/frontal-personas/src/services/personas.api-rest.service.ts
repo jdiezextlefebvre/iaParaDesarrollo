@@ -3,10 +3,10 @@ import { Injectable } from '@angular/core';
 import { Observable, catchError, map, of } from 'rxjs';
 import { environment } from '../environments/environment';
 import { fromPersonaRestDTOListToPersonaList, fromPersonaRestDTOToPersona, fromNuevaPersonaToDatosNuevaPersonaRestDTO, fromModificarPersonaToDatosModificarPersonaRestDTO } from '../mappers/persona.mapper';
-import { ModificarPersona } from '../models/frontal/modificar-persona.model';
-import { NuevaPersona } from '../models/frontal/nueva-persona.model';
-import { Persona } from '../models/frontal/persona.model';
-import { PersonaRestDTO } from '../models/rest/persona.rest.dto';
+import { ModificarPersona } from '../environments/models/frontal/modificar-persona.model';
+import { NuevaPersona } from '../environments/models/frontal/nueva-persona.model';
+import { Persona } from '../environments/models/frontal/persona.model';
+import { PersonaRestDTO } from '../environments/models/rest/persona.rest.dto';
 import { PersonasService } from './personas.service';
 
 @Injectable({

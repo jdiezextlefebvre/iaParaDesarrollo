@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { NuevaPersona } from '../../models/frontal/nueva-persona.model';
+import { NuevaPersona } from '../../environments/models/frontal/nueva-persona.model';
 import { PersonasService } from '../../services/personas.service';
 import { CommonModule } from '@angular/common';
 
