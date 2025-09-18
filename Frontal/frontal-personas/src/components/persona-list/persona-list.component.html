@@ -24,4 +24,12 @@
         (edit)="onEditarDesdeModal($event)"
         (delete)="onBorrarDesdeModal($event)">
     </app-persona-detail-modal>
+
+    <!-- Modal de edición -->
+    <app-persona-edit-modal
+        [persona]="personaSeleccionada"
+        [isVisible]="editModalVisible"
+        (closeModal)="cerrarEditModal()"
+        (personaUpdated)="onPersonaActualizada()">
+    </app-persona-edit-modal>
 </div>

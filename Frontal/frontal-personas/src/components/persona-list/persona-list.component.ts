@@ -4,11 +4,12 @@ import { PersonasService } from '../../services/personas.service';
 import { CommonModule } from '@angular/common';
 import { PersonaListItemComponent } from '../persona-list-item/persona-list-item.component';
 import { PersonaDetailModalComponent } from '../persona-detail-modal/persona-detail-modal.component';
+import { PersonaEditModalComponent } from '../persona-edit-modal/persona-edit-modal.component';
 
 @Component({
   selector: 'app-persona-list',
   standalone: true,
-  imports: [CommonModule, PersonaListItemComponent, PersonaDetailModalComponent],
+  imports: [CommonModule, PersonaListItemComponent, PersonaDetailModalComponent, PersonaEditModalComponent],
   templateUrl: './persona-list.component.html',
   styleUrl: './persona-list.component.css'
 })
@@ -19,6 +20,7 @@ export class PersonaListComponent implements OnInit {
   error: string | null = null;
   personaSeleccionada: Persona | null = null;
   modalVisible = false;
+  editModalVisible = false;
 
   constructor(private personasService: PersonasService) {}
 
@@ -53,7 +55,11 @@ export class PersonaListComponent implements OnInit {
 
   onEditarPersona(id: string): void {
     console.log(`LISTA: Editar persona con ID: ${id}`);
-    // Aquí iría la lógica de navegación a la edición
+    const persona = this.personas.find(p => p.id === id);
+    if (persona) {
+      this.personaSeleccionada = persona;
+      this.editModalVisible = true;
+    }
   }
 
   onBorrarPersona(id: string): void {
@@ -84,11 +90,22 @@ export class PersonaListComponent implements OnInit {
   onEditarDesdeModal(id: string): void {
     console.log(`MODAL: Editar persona con ID: ${id}`);
     this.cerrarModal();
-    // Aquí iría la lógica de navegación a la edición
+    this.onEditarPersona(id);
   }
 
   onBorrarDesdeModal(id: string): void {
     console.log(`MODAL: Borrar persona con ID: ${id}`);
     this.onBorrarPersona(id); // Reutiliza la lógica de borrado
+  }
+
+  // Métodos para el modal de edición
+  cerrarEditModal(): void {
+    this.editModalVisible = false;
+    this.personaSeleccionada = null;
+  }
+
+  onPersonaActualizada(): void {
+    console.log('Persona actualizada, recargando lista...');
+    this.cargarPersonas(); // Recargar la lista para mostrar los cambios
   }
 }

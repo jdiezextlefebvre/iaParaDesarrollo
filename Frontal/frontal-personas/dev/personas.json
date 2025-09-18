@@ -1,11 +1,11 @@
 {
   "personas": [
     {
-      "id": "3",
       "nombre": "Carlos García",
       "dni": "11223344C",
       "email": "carlos.garcia@example.com",
-      "edad": 45
+      "edad": 45,
+      "id": "3"
     },
     {
       "id": "4",
