@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, map, of } from 'rxjs';
 import { environment } from '../environments/environment';
-import { fromPersonaRestDTOListToPersonaList, fromPersonaRestDTOToPersona } from '../mappers/persona.mapper';
+import { fromPersonaRestDTOListToPersonaList, fromPersonaRestDTOToPersona, fromNuevaPersonaToDatosNuevaPersonaRestDTO, fromModificarPersonaToDatosModificarPersonaRestDTO } from '../mappers/persona.mapper';
 import { ModificarPersona } from '../models/frontal/modificar-persona.model';
 import { NuevaPersona } from '../models/frontal/nueva-persona.model';
 import { Persona } from '../models/frontal/persona.model';
@@ -16,7 +16,7 @@ export class PersonasApiRestService extends PersonasService {
 
   private readonly apiUrl = `${environment.apiUrl}/personas`;
 
-  constructor(private http: HttpClient) {
+  constructor(private readonly http: HttpClient) {
     super();
   }
 
@@ -41,8 +41,8 @@ export class PersonasApiRestService extends PersonasService {
   }
 
   override create(persona: NuevaPersona): Observable<Persona> {
-    // El mapeo se hará en el método cuando lo implementemos
-    return this.http.post<PersonaRestDTO>(this.apiUrl, persona).pipe(
+    const personaDTO = fromNuevaPersonaToDatosNuevaPersonaRestDTO(persona);
+    return this.http.post<PersonaRestDTO>(this.apiUrl, personaDTO).pipe(
       map(fromPersonaRestDTOToPersona),
       catchError((error) => {
         console.error('Error al crear la persona:', error);
@@ -52,8 +52,8 @@ export class PersonasApiRestService extends PersonasService {
   }
 
   override update(id: string, persona: ModificarPersona): Observable<Persona> {
-    // El mapeo se hará en el método cuando lo implementemos
-    return this.http.put<PersonaRestDTO>(`${this.apiUrl}/${id}`, persona).pipe(
+    const personaDTO = fromModificarPersonaToDatosModificarPersonaRestDTO(persona);
+    return this.http.put<PersonaRestDTO>(`${this.apiUrl}/${id}`, personaDTO).pipe(
       map(fromPersonaRestDTOToPersona),
       catchError((error) => {
         console.error(`Error al actualizar la persona con id ${id}:`, error);

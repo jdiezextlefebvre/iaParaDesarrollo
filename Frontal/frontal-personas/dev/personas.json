@@ -29,18 +29,11 @@
       "edad": 28
     },
     {
-      "id": "7",
       "nombre": "Miguel Torres",
       "dni": "34567890H",
       "email": "miguel.torres@example.com",
-      "edad": 42
-    },
-    {
-      "id": "8",
-      "nombre": "Sandra López",
-      "dni": "23456789I",
-      "email": "sandra.lopez@example.com",
-      "edad": 31
+      "edad": 43,
+      "id": "7"
     },
     {
       "id": "c068",
