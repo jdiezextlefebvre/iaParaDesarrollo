@@ -15,4 +15,13 @@
     } @else {
         <p>No se encontraron personas.</p>
     }
+
+    <!-- Modal de detalle -->
+    <app-persona-detail-modal
+        [persona]="personaSeleccionada"
+        [isVisible]="modalVisible"
+        (closeModal)="cerrarModal()"
+        (edit)="onEditarDesdeModal($event)"
+        (delete)="onBorrarDesdeModal($event)">
+    </app-persona-detail-modal>
 </div>

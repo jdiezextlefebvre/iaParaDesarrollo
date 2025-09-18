@@ -1,0 +1,150 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 500px;
+  animation: slideIn 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #343a40;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.close-button {
+  font-size: 1.5rem;
+  color: #6c757d;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-button:hover {
+  color: #343a40;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.campo {
+  display: flex;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.campo strong {
+  font-weight: 600;
+  color: #495057;
+  width: 100px;
+  margin-right: 1rem;
+}
+
+.campo span {
+  color: #212529;
+  flex: 1;
+}
+
+.modal-footer {
+  padding: 1rem 2rem 1.5rem;
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.acciones {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.acciones i {
+  font-size: 1.3rem;
+  color: #337ab7;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.acciones i:hover {
+  background-color: #e9ecef;
+  color: #23527c;
+}
+
+.acciones .fa-trash:hover {
+  color: #d9534f;
+  background-color: #f8d7da;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    margin: 1rem;
+  }
+  
+  .modal-header,
+  .modal-body,
+  .modal-footer {
+    padding: 1rem;
+  }
+  
+  .campo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .campo strong {
+    width: auto;
+    margin-bottom: 0.25rem;
+    margin-right: 0;
+  }
+}

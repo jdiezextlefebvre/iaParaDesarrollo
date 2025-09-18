@@ -3,11 +3,12 @@ import { Persona } from '../../models/frontal/persona.model';
 import { PersonasService } from '../../services/personas.service';
 import { CommonModule } from '@angular/common';
 import { PersonaListItemComponent } from '../persona-list-item/persona-list-item.component';
+import { PersonaDetailModalComponent } from '../persona-detail-modal/persona-detail-modal.component';
 
 @Component({
   selector: 'app-persona-list',
   standalone: true,
-  imports: [CommonModule, PersonaListItemComponent],
+  imports: [CommonModule, PersonaListItemComponent, PersonaDetailModalComponent],
   templateUrl: './persona-list.component.html',
   styleUrl: './persona-list.component.css'
 })
@@ -16,6 +17,8 @@ export class PersonaListComponent implements OnInit {
   personas: Persona[] = [];
   isLoading = true;
   error: string | null = null;
+  personaSeleccionada: Persona | null = null;
+  modalVisible = false;
 
   constructor(private personasService: PersonasService) {}
 
@@ -41,7 +44,11 @@ export class PersonaListComponent implements OnInit {
 
   onVerPersona(id: string): void {
     console.log(`LISTA: Ver detalle de la persona con ID: ${id}`);
-    // Aquí iría la lógica de navegación al detalle
+    const persona = this.personas.find(p => p.id === id);
+    if (persona) {
+      this.personaSeleccionada = persona;
+      this.modalVisible = true;
+    }
   }
 
   onEditarPersona(id: string): void {
@@ -56,11 +63,32 @@ export class PersonaListComponent implements OnInit {
         console.log(`Persona con ID: ${id} borrada con éxito.`);
         // Actualiza la lista local para reflejar el cambio en la UI
         this.personas = this.personas.filter(p => p.id !== id);
+        // Si la persona borrada era la seleccionada, cerrar el modal
+        if (this.personaSeleccionada?.id === id) {
+          this.cerrarModal();
+        }
       },
       error: (err) => {
         console.error(`Error al borrar la persona con ID: ${id}`, err);
         // Opcional: mostrar un mensaje de error al usuario
       }
     });
+  }
+
+  // Métodos para el modal
+  cerrarModal(): void {
+    this.modalVisible = false;
+    this.personaSeleccionada = null;
+  }
+
+  onEditarDesdeModal(id: string): void {
+    console.log(`MODAL: Editar persona con ID: ${id}`);
+    this.cerrarModal();
+    // Aquí iría la lógica de navegación a la edición
+  }
+
+  onBorrarDesdeModal(id: string): void {
+    console.log(`MODAL: Borrar persona con ID: ${id}`);
+    this.onBorrarPersona(id); // Reutiliza la lógica de borrado
   }
 }

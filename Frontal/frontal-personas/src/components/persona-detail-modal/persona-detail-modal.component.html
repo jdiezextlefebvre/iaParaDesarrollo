@@ -1,0 +1,39 @@
+@if (isVisible && persona) {
+  <div class="modal-overlay" (click)="onOverlayClick($event)">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>{{ persona.nombre }}</h2>
+        <i class="fas fa-times close-button" (click)="cerrarModal()"></i>
+      </div>
+      
+      <div class="modal-body">
+        <div class="campo">
+          <strong>Nombre:</strong>
+          <span>{{ persona.nombre }}</span>
+        </div>
+        
+        <div class="campo">
+          <strong>DNI:</strong>
+          <span>{{ persona.dni }}</span>
+        </div>
+        
+        <div class="campo">
+          <strong>Email:</strong>
+          <span>{{ persona.email }}</span>
+        </div>
+        
+        <div class="campo">
+          <strong>Edad:</strong>
+          <span>{{ persona.edad }} años</span>
+        </div>
+      </div>
+      
+      <div class="modal-footer">
+        <div class="acciones">
+          <i class="fas fa-edit" (click)="editarPersona()" title="Editar persona"></i>
+          <i class="fas fa-trash" (click)="borrarPersona()" title="Borrar persona"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+}
