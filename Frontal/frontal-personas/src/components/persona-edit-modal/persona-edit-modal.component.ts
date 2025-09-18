@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Persona } from '../../models/frontal/persona.model';
-import { ModificarPersona } from '../../models/frontal/modificar-persona.model';
+import { Persona } from '../../environments/models/frontal/persona.model';
+import { ModificarPersona } from '../../environments/models/frontal/modificar-persona.model';
 import { PersonasService } from '../../services/personas.service';
 import { CommonModule } from '@angular/common';
 

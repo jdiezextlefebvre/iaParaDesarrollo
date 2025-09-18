@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Persona } from '../../models/frontal/persona.model';
+import { Persona } from '../../environments/models/frontal/persona.model';
 import { PersonasService } from '../../services/personas.service';
 import { CommonModule } from '@angular/common';
 import { PersonaListItemComponent } from '../persona-list-item/persona-list-item.component';

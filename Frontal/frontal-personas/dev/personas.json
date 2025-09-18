@@ -1,32 +1,11 @@
 {
   "personas": [
     {
-      "nombre": "Carlos García",
-      "dni": "11223344C",
-      "email": "carlos.garcia@example.com",
-      "edad": 45,
-      "id": "3"
-    },
-    {
-      "id": "4",
-      "nombre": "Laura Martínez",
-      "dni": "44332211D",
-      "email": "laura.martinez@example.com",
-      "edad": 38
-    },
-    {
-      "id": "5",
-      "nombre": "Carlos García",
-      "dni": "87654321F",
-      "email": "carlos.garcia@example.com",
-      "edad": 35
-    },
-    {
-      "id": "6",
       "nombre": "Elena Rodríguez",
-      "dni": "56789012G",
+      "dni": "99999999M",
       "email": "elena.rodriguez@example.com",
-      "edad": 28
+      "edad": 28,
+      "id": "6"
     },
     {
       "nombre": "Miguel Torres",
@@ -41,6 +20,13 @@
       "dni": "72727272R",
       "email": "ivan.osuna.ayuste@gmail.com",
       "edad": 47
+    },
+    {
+      "id": "d4bb",
+      "nombre": "Menchu",
+      "dni": "29292938M",
+      "email": "felipe@com.com",
+      "edad": 120
     }
   ]
 }

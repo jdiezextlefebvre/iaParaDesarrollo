@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Persona } from '../../models/frontal/persona.model';
+import { Persona } from '../../environments/models/frontal/persona.model';
 import { CommonModule } from '@angular/common';
 
 @Component({

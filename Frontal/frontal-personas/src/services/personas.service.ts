@@ -1,7 +1,7 @@
 import { Observable } from 'rxjs';
-import { ModificarPersona } from '../models/frontal/modificar-persona.model';
-import { NuevaPersona } from '../models/frontal/nueva-persona.model';
-import { Persona } from '../models/frontal/persona.model';
+import { ModificarPersona } from '../environments/models/frontal/modificar-persona.model';
+import { NuevaPersona } from '../environments/models/frontal/nueva-persona.model';
+import { Persona } from '../environments/models/frontal/persona.model';
 
 /**
  * Contrato que define las operaciones disponibles para la gestión de personas.
