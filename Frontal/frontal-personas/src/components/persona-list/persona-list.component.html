@@ -1,4 +1,11 @@
 <div class="list-container">
+    <div class="list-header">
+        <h2>Listado de Personas</h2>
+        <button class="btn btn-new" (click)="abrirModalCrear()">
+            <i class="fas fa-plus"></i> Nueva Persona
+        </button>
+    </div>
+
     @if (isLoading) {
         <p>Cargando personas...</p>
     } @else if (error) {
@@ -32,4 +39,11 @@
         (closeModal)="cerrarEditModal()"
         (personaUpdated)="onPersonaActualizada()">
     </app-persona-edit-modal>
+
+    <!-- Modal de creación -->
+    <app-persona-create-modal
+        [isVisible]="createModalVisible"
+        (closeModal)="cerrarCreateModal()"
+        (personaCreated)="onPersonaCreada()">
+    </app-persona-create-modal>
 </div>

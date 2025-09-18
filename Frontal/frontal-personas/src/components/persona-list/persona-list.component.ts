@@ -5,11 +5,12 @@ import { CommonModule } from '@angular/common';
 import { PersonaListItemComponent } from '../persona-list-item/persona-list-item.component';
 import { PersonaDetailModalComponent } from '../persona-detail-modal/persona-detail-modal.component';
 import { PersonaEditModalComponent } from '../persona-edit-modal/persona-edit-modal.component';
+import { PersonaCreateModalComponent } from '../persona-create-modal/persona-create-modal.component';
 
 @Component({
   selector: 'app-persona-list',
   standalone: true,
-  imports: [CommonModule, PersonaListItemComponent, PersonaDetailModalComponent, PersonaEditModalComponent],
+  imports: [CommonModule, PersonaListItemComponent, PersonaDetailModalComponent, PersonaEditModalComponent, PersonaCreateModalComponent],
   templateUrl: './persona-list.component.html',
   styleUrl: './persona-list.component.css'
 })
@@ -21,8 +22,9 @@ export class PersonaListComponent implements OnInit {
   personaSeleccionada: Persona | null = null;
   modalVisible = false;
   editModalVisible = false;
+  createModalVisible = false;
 
-  constructor(private personasService: PersonasService) {}
+  constructor(private readonly personasService: PersonasService) {}
 
   ngOnInit(): void {
     this.cargarPersonas();
@@ -107,5 +109,19 @@ export class PersonaListComponent implements OnInit {
   onPersonaActualizada(): void {
     console.log('Persona actualizada, recargando lista...');
     this.cargarPersonas(); // Recargar la lista para mostrar los cambios
+  }
+
+  // Métodos para el modal de creación
+  abrirModalCrear(): void {
+    this.createModalVisible = true;
+  }
+
+  cerrarCreateModal(): void {
+    this.createModalVisible = false;
+  }
+
+  onPersonaCreada(): void {
+    console.log('Persona creada, recargando lista...');
+    this.cargarPersonas(); // Recargar la lista para mostrar la nueva persona
   }
 }

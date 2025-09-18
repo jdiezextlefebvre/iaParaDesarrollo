@@ -41,6 +41,13 @@
       "dni": "23456789I",
       "email": "sandra.lopez@example.com",
       "edad": 31
+    },
+    {
+      "id": "c068",
+      "nombre": "Ivan",
+      "dni": "72727272R",
+      "email": "ivan.osuna.ayuste@gmail.com",
+      "edad": 47
     }
   ]
 }
